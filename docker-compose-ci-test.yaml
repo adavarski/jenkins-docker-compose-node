@@ -12,7 +12,7 @@ services:
         - web_app
       environment:
         - FLASK_ENV=docker
-      command: ["bash", "-c", "sleep 10 && py.test"]
+      command: ["bash", "-c", "sleep 10 && py.test && find . -name "__pycache__" -delete"]
     web_app:
       build:
           context: ./
