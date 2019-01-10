@@ -6,7 +6,7 @@ node {
      }
      stage('Integration Test') {
        sh "docker-compose -f docker-compose-ci-test.yaml up -d"
-       sh "docker wait jenkins-docker-compose-node_integration_test_1"
+       sh "docker wait jenkins-docker-compose-python_integration_test_1"
      }
      stage('Deploy') {
        sh "docker build ."
